@@ -1,0 +1,6 @@
+streamlit>=1.25
+tensorflow>=2.11
+numpy
+pandas
+Pillow
+altair
