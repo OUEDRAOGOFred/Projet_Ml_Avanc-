@@ -9,7 +9,14 @@ import io
 import base64
 import streamlit.components.v1 as components
 
-st.set_page_config(page_title="Analyse de modèle - CNN", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(
+    page_title="Détection Pneumonie - IA Médicale",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': "Application d'IA médicale pour la détection de pneumonie à partir de radiographies thoraciques."
+    }
+)
 
 try:
     # prefer absolute path of this file

@@ -588,3 +588,162 @@ table, th, td {
   box-shadow: 0 20px 50px rgba(240, 147, 251, 0.2);
   border-color: rgba(240, 147, 251, 0.3);
 }
+
+/* 📱 MOBILE RESPONSIVE DESIGN */
+/* Optimisation pour smartphones et tablettes */
+
+@media screen and (max-width: 768px) {
+  /* Réduire les marges et paddings sur mobile */
+  body, .stApp {
+    overflow-x: hidden;
+  }
+  
+  /* Titres plus petits sur mobile */
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem) !important;
+  }
+  
+  h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem) !important;
+  }
+  
+  /* Cards plus compactes sur mobile */
+  .feature-card {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px) scale(1);
+  }
+  
+  /* Title card responsive */
+  .title-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Boutons plus grands pour le tactile */
+  .stButton > button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-height: 48px;
+    width: 100%;
+  }
+  
+  /* Images responsive */
+  .stImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Sidebar en mode mobile */
+  .css-1d391kg {
+    width: 100% !important;
+  }
+  
+  /* Tables responsive */
+  .stDataFrame {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Réduire les ombres sur mobile (performance) */
+  .stContainer > div {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .stContainer > div:hover {
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Colonnes en stack sur mobile */
+  .stColumn {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* Améliorer l'espacement vertical */
+  .main .block-container {
+    padding: 1rem 1rem;
+  }
+  
+  /* File uploader plus grand */
+  .stFileUploader > div {
+    padding: 2rem 1rem;
+    min-height: 120px;
+  }
+  
+  /* Expanders plus visibles */
+  .stExpander {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Optimisation pour très petits écrans (< 480px) */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+  }
+  
+  .stButton > button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Réduire les marges sur très petits écrans */
+  .main .block-container {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Optimisation tablette (768px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .stColumn {
+    padding: 0.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+/* Amélioration du tactile pour tous les appareils tactiles */
+@media (hover: none) and (pointer: coarse) {
+  /* Augmenter la zone tactile des boutons */
+  .stButton > button,
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Désactiver les effets hover sur tactile */
+  .feature-card:hover,
+  .stContainer > div:hover {
+    transform: none;
+  }
+  
+  /* Améliorer le feedback tactile */
+  .stButton > button:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
