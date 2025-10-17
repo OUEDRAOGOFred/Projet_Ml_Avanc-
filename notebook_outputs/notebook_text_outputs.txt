@@ -1,0 +1,2 @@
+TensorFlow version: 2.20.0
+GPU disponible: []

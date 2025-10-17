@@ -30,6 +30,9 @@ def extract_images_and_text(nb_path, out_dir):
     text_out = []
     metrics = {}
     img_count = 0
+    
+    # NEW: Store structured text outputs
+    text_outputs = []
 
     tables_dir = os.path.join(out_dir, 'tables')
     ensure_dir(tables_dir)
@@ -47,6 +50,14 @@ def extract_images_and_text(nb_path, out_dir):
                 if isinstance(txt, list):
                     txt = ''.join(txt)
                 text_out.append(txt)
+                
+                # NEW: Store structured text with cell info
+                text_outputs.append({
+                    'cell_index': ci,
+                    'output_index': oi,
+                    'text': txt,
+                    'cell_source': cell_source.strip()[:200]  # First 200 chars
+                })
 
             data = out.get('data', {}) or {}
 
@@ -127,6 +138,12 @@ def extract_images_and_text(nb_path, out_dir):
     text_path = os.path.join(out_dir, 'notebook_text_outputs.txt')
     with open(text_path, 'w', encoding='utf-8') as tf:
         tf.write('\n\n'.join(text_out))
+    
+    # NEW: Save structured text outputs as JSON
+    text_outputs_path = os.path.join(out_dir, 'text_outputs.json')
+    with open(text_outputs_path, 'w', encoding='utf-8') as tof:
+        json.dump(text_outputs, tof, ensure_ascii=False, indent=2)
+    print(f'Structured text outputs saved to {text_outputs_path}')
 
     # Very small metric extraction heuristics: look for lines containing keywords
     keywords = ['accuracy', 'auc', 'precision', 'recall', 'f1', 'best model', 'meilleur', 'accuracy:']

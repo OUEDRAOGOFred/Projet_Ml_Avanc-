@@ -1,0 +1,76 @@
+{
+  "expected": [
+    {
+      "cell_index": 1,
+      "ref": "cnn_evaluation_complete.png",
+      "resolved_path": "cnn_evaluation_complete.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "comparaison_finale_modeles.png",
+      "resolved_path": "comparaison_finale_modeles.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "matrices_confusion_comparaison.png",
+      "resolved_path": "matrices_confusion_comparaison.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "courbes_roc_comparaison.png",
+      "resolved_path": "courbes_roc_comparaison.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "analyse_erreurs.png",
+      "resolved_path": "analyse_erreurs.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "resultats_comparaison_modeles.csv",
+      "resolved_path": "resultats_comparaison_modeles.csv",
+      "exists": true
+    },
+    {
+      "cell_index": 1,
+      "ref": "cnn_evaluation_complete.png",
+      "resolved_path": "cnn_evaluation_complete.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "comparaison_finale_modeles.png",
+      "resolved_path": "comparaison_finale_modeles.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "matrices_confusion_comparaison.png",
+      "resolved_path": "matrices_confusion_comparaison.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "courbes_roc_comparaison.png",
+      "resolved_path": "courbes_roc_comparaison.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "analyse_erreurs.png",
+      "resolved_path": "analyse_erreurs.png",
+      "exists": false
+    },
+    {
+      "cell_index": 1,
+      "ref": "resultats_comparaison_modeles.csv",
+      "resolved_path": "resultats_comparaison_modeles.csv",
+      "exists": true
+    }
+  ]
+}

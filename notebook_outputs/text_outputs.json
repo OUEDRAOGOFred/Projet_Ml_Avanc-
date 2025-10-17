@@ -1,0 +1,8 @@
+[
+  {
+    "cell_index": 1,
+    "output_index": 0,
+    "text": "TensorFlow version: 2.20.0\nGPU disponible: []\n",
+    "cell_source": "# -------------------------------------------------------------\n# 2) Imports\n# -------------------------------------------------------------\nimport os\nimport shutil\nimport random\nimport numpy as np\nim"
+  }
+]
