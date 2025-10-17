@@ -335,17 +335,7 @@ def main():
         feat1, feat2, feat3 = st.columns(3, gap="large")
         with feat1:
             st.markdown("""
-            <div style="
-                text-align: center; 
-                padding: 2rem 1.5rem; 
-                background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%); 
-                border-radius: 20px;
-                border: 2px solid rgba(102, 126, 234, 0.1);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                cursor: default;
-            " onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 50px rgba(102, 126, 234, 0.2)'; this.style.borderColor='rgba(102, 126, 234, 0.3)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.08)'; this.style.borderColor='rgba(102, 126, 234, 0.1)';">
+            <div class="feature-card feature-card-blue">
                 <div style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">📊</div>
                 <h4 style="color: #0f172a; margin-bottom: 0.75rem; font-weight: 700; font-size: 1.25rem;">Analyse Avancée</h4>
                 <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">Traitement d'images médicales avec CNN optimisés</p>
@@ -354,17 +344,7 @@ def main():
         
         with feat2:
             st.markdown("""
-            <div style="
-                text-align: center; 
-                padding: 2rem 1.5rem; 
-                background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%); 
-                border-radius: 20px;
-                border: 2px solid rgba(34, 197, 94, 0.1);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                cursor: default;
-            " onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 50px rgba(34, 197, 94, 0.2)'; this.style.borderColor='rgba(34, 197, 94, 0.3)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.08)'; this.style.borderColor='rgba(34, 197, 94, 0.1)';">
+            <div class="feature-card feature-card-green">
                 <div style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">⚡</div>
                 <h4 style="color: #0f172a; margin-bottom: 0.75rem; font-weight: 700; font-size: 1.25rem;">Rapidité</h4>
                 <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">Résultats en moins de 3 secondes</p>
@@ -373,17 +353,7 @@ def main():
         
         with feat3:
             st.markdown("""
-            <div style="
-                text-align: center; 
-                padding: 2rem 1.5rem; 
-                background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%); 
-                border-radius: 20px;
-                border: 2px solid rgba(240, 147, 251, 0.1);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                cursor: default;
-            " onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 50px rgba(240, 147, 251, 0.2)'; this.style.borderColor='rgba(240, 147, 251, 0.3)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.08)'; this.style.borderColor='rgba(240, 147, 251, 0.1)';">
+            <div class="feature-card feature-card-pink">
                 <div style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">🔒</div>
                 <h4 style="color: #0f172a; margin-bottom: 0.75rem; font-weight: 700; font-size: 1.25rem;">Fiabilité</h4>
                 <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">Validation médicale approfondie</p>
