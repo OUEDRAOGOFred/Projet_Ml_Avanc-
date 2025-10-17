@@ -497,24 +497,6 @@ def main():
                         except Exception:
                             pass
 
-        # Tables section - only show if CSV comparison exists
-        tables_dir = os.path.join(nb_outputs_dir, 'tables')
-        if os.path.exists(tables_dir):
-            csvs = [f for f in os.listdir(tables_dir) if f.lower().endswith('.csv')]
-            if csvs:
-                st.markdown('---')
-                st.subheader('📊 Tables Extraites du Notebook')
-                sel = st.selectbox('Choisissez un tableau à prévisualiser', ['(aucun)'] + csvs)
-                if sel and sel != '(aucun)':
-                    try:
-                        df_tbl = pd.read_csv(os.path.join(tables_dir, sel))
-                        st.dataframe(df_tbl, width=None)
-                        with open(os.path.join(tables_dir, sel), 'rb') as bf:
-                            csv_bytes = bf.read()
-                        st.download_button(f'📥 Télécharger {sel}', data=csv_bytes, file_name=sel, mime='text/csv')
-                    except Exception as e:
-                        st.warning(f'Impossible de lire le CSV: {e}')
-
     def render_predict():
         st.subheader('Prédiction d\'image')
         col1, col2 = st.columns([2,1])
