@@ -141,13 +141,70 @@ def preprocess_image(img: Image.Image, target_size=(128, 128), channels=3):
 
 def main():
     
-    # Sidebar: navigation only, no options
+    # Sidebar: navigation + theme selector
     with st.sidebar:
         local_logo = os.path.join(_BASE, 'assets', 'logo.png')
         if os.path.exists(local_logo):
             st.image(local_logo, width=120)
         else:
             st.markdown("<div style='height:88px'></div>", unsafe_allow_html=True)
+        
+        # Theme selector
+        st.markdown("## 🎨 Thème")
+        theme = st.radio(
+            "Choisissez le thème",
+            ["☀️ Jour (Clair)", "🌙 Nuit (Sombre)"],
+            index=0,
+            key="theme_selector"
+        )
+        
+        # Apply theme CSS
+        if "Nuit" in theme:
+            st.markdown("""
+            <style>
+            /* Force dark theme */
+            .stApp {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+                color: #e2e8f0 !important;
+            }
+            body, .stApp {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #e2e8f0 !important;
+            }
+            p, span, div, label {
+                color: #cbd5e1 !important;
+            }
+            .stMarkdown {
+                color: #cbd5e1 !important;
+            }
+            /* Cards with dark background */
+            .feature-card, .title-card, div[style*="background"] {
+                background: rgba(30, 41, 59, 0.8) !important;
+                border-color: rgba(148, 163, 184, 0.2) !important;
+            }
+            /* Sidebar dark */
+            .css-1d391kg, [data-testid="stSidebar"] {
+                background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
+            }
+            /* Buttons */
+            .stButton > button {
+                background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+                color: white !important;
+            }
+            /* Input fields */
+            .stTextInput > div > div > input,
+            .stSelectbox > div > div,
+            .stFileUploader {
+                background: #1e293b !important;
+                color: #e2e8f0 !important;
+                border-color: #475569 !important;
+            }
+            </style>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("---")
         st.markdown("## Navigation")
         page = st.selectbox('Aller à', ['Accueil', 'Outputs', 'Prédiction'])
         st.markdown('---')
